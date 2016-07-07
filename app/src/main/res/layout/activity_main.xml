@@ -14,23 +14,22 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_marginTop="@dimen/activity_horizontal_margin">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="130dp"
-            android:id="@+id/imageView"
+            android:id="@+id/topHeadImg"
             android:background="@drawable/header"
-            android:foreground="@color/bright_foreground_disabled_material_dark" />
+            android:foreground="@color/bright_foreground_disabled_material_dark"
+            android:isScrollContainer="false" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Modernisme"
-            android:id="@+id/textView2"
+            android:id="@+id/topHeadTxt"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:textSize="40dp"
@@ -41,37 +40,64 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/place"
-                android:id="@+id/imageView2" />
+                android:id="@+id/GeoLocIcon" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/location"
+                android:id="@+id/geoLocAddrs"
                 android:text="Carrer de la Font del Gat, 26" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/TimeIcon"
+                android:src="@drawable/clock"
+                android:hapticFeedbackEnabled="true" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView3" />
+                android:id="@+id/TimeDetail"
+                android:text="De Dilluns a Divendres" />
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ticket"
+            android:id="@+id/PricingIcon"
+            android:keepScreenOn="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/PricingTxt"
+            android:text="5 €" />
     </LinearLayout>
 
     <TextView
